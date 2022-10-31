@@ -1,2 +1,16 @@
 # Mid-Term-Apple-Stock-Forecasting-ML
 The goal of the project was to attempt to forecast Apple stock performance at close after 2 days using ML, a dataframe was built using possibly predictive features
+
+The dataframe was build using historical data for Apple Stock, S&P500, and NASDAQ 100 Technology Sector Index
+Features inlcude the performance of SP500 and Tech to date at 3 time points [7 days,14 days,30 days] measured in precent changed
+As well as APPLE stock performance to data relative to the mean price off the previous [7 days,14 days,30 days] also measured in precent changed
+Trading Volume means were added as features
+Target column is the exact change in price in percent at close two trading days
+
+Intialy regression modeling was tried but quickly proved ineffective and the model was moved to binary classification for postive change and negative change in stock value after 2 trading days
+
+Model_Simulating.py shows the building of the model, a random forrest was used (logistic regression with polynomial kernals were explored but not as effective), and the model being deployed on 30 days of sequential clean test data to simulate unknown future market outcomes. Stock purchases and short positions were based off exact Open price to exact close price two days later. At a random state 146 (Chosen at random for repeatability) the total gain was roughly 1%. 
+
+Post inital simulating the test data was explored thoroughly and the model had a had high False Positive rate. In a few weeks new clean test data will be explored taking into account the high false positive rate and I'll see if this pattern countinues. 
+
+Future Changes: Neural Nets will be explored as a possible model, as well as expansions to the inital dataset created to inlucde more features. A risk model will be created based off the FN and FP from training data to determine hedge rates for furture simulating
