@@ -8,10 +8,10 @@ Trading Volume means were added as features.
 Target column is the exact change in price in percent at close two trading days.
 Model_CSV.csv is this dataset
 
-Intialy regression modeling was tried but quickly proved ineffective and the model was moved to binary classification for postive change and negative change in stock value after 2 trading days
+Initially regression modeling was tried but quickly proved ineffective and the model was moved to binary classification for postive change and negative change in stock value after 2 trading days
 
 Model_Simulating.py shows the building of the model, a random forrest was used (logistic regression with polynomial kernals were explored but not as effective), and the model being deployed on 30 days of sequential clean test data to simulate unknown future market outcomes. Stock purchases and short positions were based off exact Open price to exact close price two days later. At a random state 146 (Chosen at random for repeatability) the total gain was roughly 1%. 
 
-Post inital simulating the test data was explored thoroughly and the model had a had high False Positive rate. In a few weeks new clean test data will be explored taking into account the high false positive rate and I'll see if this pattern countinues. 
+Post inital simulating the test data was explored thoroughly and the model had a had high False Positive rate. In a few weeks new clean test data will be explored taking into account the high false positive rate and I'll see if this pattern countinues. The simulating was replicated with no set random state and preformance was as good as 15%+ and bad as -20%+
 
 Future Changes: Neural Nets will be explored as a possible model, as well as expansions to the inital dataset created to inlucde more features. A risk model will be created based off the FN and FP from training data to determine hedge rates for furture simulating
