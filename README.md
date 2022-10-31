@@ -1,11 +1,12 @@
 # Mid-Term-Apple-Stock-Forecasting-ML
 The goal of the project was to attempt to forecast Apple stock performance at close after 2 days using ML, a dataframe was built using possibly predictive features
 
-The dataframe was build using historical data for Apple Stock, S&P500, and NASDAQ 100 Technology Sector Index
-Features inlcude the performance of SP500 and Tech to date at 3 time points [7 days,14 days,30 days] measured in precent changed
-As well as APPLE stock performance to data relative to the mean price off the previous [7 days,14 days,30 days] also measured in precent changed
-Trading Volume means were added as features
-Target column is the exact change in price in percent at close two trading days
+The dataframe was build using historical data for Apple Stock, S&P500, and NASDAQ 100 Technology Sector Index.
+Features inlcude the performance of SP500 and Tech to date at 3 time points [7 days,14 days,30 days] measured in precent changed.
+As well as APPLE stock performance to data relative to the mean price off the previous [7 days,14 days,30 days] also measured in precent changed.
+Trading Volume means were added as features.
+Target column is the exact change in price in percent at close two trading days.
+Model_CSV.csv is this dataset
 
 Intialy regression modeling was tried but quickly proved ineffective and the model was moved to binary classification for postive change and negative change in stock value after 2 trading days
 
