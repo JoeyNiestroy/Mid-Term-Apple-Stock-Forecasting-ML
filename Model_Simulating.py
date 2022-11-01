@@ -1,6 +1,6 @@
 from sklearn.ensemble import RandomForestClassifier
 import pandas as pd
-import sys
+import random
 def class_funct(value):
     if value > 0:
         return 1
@@ -42,9 +42,16 @@ if __name__ == "__main__":
     determined by actual Target."""
     total_gain_loss = []
     for index in test.index:
+        """Code Block for purchase positions"""
         if test.iloc[index]["Prediction"] == 1:
-            value = (30*test.iloc[index]["Target"])+30
-            total_gain_loss.append(value)
+            """Conditional based off false positives rates from training data"""
+            if random.randint(0,(804+38)) < 38:
+                value = (-30*test.iloc[index]["Target"])+30
+                total_gain_loss.append(value)
+            else:
+                value = (30*test.iloc[index]["Target"])+30
+                total_gain_loss.append(value)
+            """Code block for shorting positions""" 
         else:
             if test.iloc[index]["Target"] <= 0:
                 value = (-30*test.iloc[index]["Target"])+30
