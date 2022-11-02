@@ -14,4 +14,4 @@ Model_Simulating.py shows the building of the model, a random forrest was used (
 
 Post inital simulating the test data was explored thoroughly and the model had also had high False Positive rate, which explains the preformance boost of the probability conditonal. In a few weeks new clean test data will be explored taking into account the high false positive rate and I'll see if this pattern countinues. The simulating was replicated with no set random state and preformance was as good as 5%+ and bad as 6%+
 
-Future Changes: Neural Nets will be explored as a possible model, as well as expansions to the inital dataset created to inlucde more features. A more in depth risk model will be created based off the FN and FP from training data to determine hedge rates for furture simulating
+Future Changes: Neural Nets will be explored as a possible model, as well as expansions to the inital dataset created to inlucde more features. A more in depth risk model will be created based off the FN and FP from training data
