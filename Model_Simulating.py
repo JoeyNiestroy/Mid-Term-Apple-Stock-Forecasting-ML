@@ -53,11 +53,7 @@ if __name__ == "__main__":
                 total_gain_loss.append(value)
             """Code block for shorting positions""" 
         else:
-            if test.iloc[index]["Target"] <= 0:
-                value = (-30*test.iloc[index]["Target"])+30
-                total_gain_loss.append(value)
-            else:
-                value = (30*test.iloc[index]["Target"])+30
-                total_gain_loss.append(value)
+            value = (-start/3*test.iloc[index]["Target"])+start/3
+            total_gain_loss.append(value)
     print(sum(total_gain_loss))
 
