@@ -29,7 +29,7 @@ if __name__ == "__main__":
     """Defining and training Model, hyperparamter tuning was done in Jupyter, random grid search was used 
     valiadation data created from training data"""
     
-    model_class = RandomForestClassifier(n_estimators = 500, max_depth = 13, min_samples_split = 8, random_state = 8)
+    model_class = RandomForestClassifier(n_estimators = 500, max_depth = 10, min_samples_split = 8, random_state = 8)
     model_class.fit(X_train,y_train)
 
     """Test df is created for market simulation, Open and target columns are brought back in"""
