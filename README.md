@@ -8,6 +8,8 @@ Trading Volume means were added as features.
 Target column is the exact change in price in percent at close two trading days.
 Model_CSV.csv is this dataset
 
+Features were built off hypothesis on retail invenstor patterns as well traditional mean reversion theory
+
 Initially regression modeling was tried but quickly proved ineffective and the model was moved to binary classification for postive change and negative change in stock value after 2 trading days
 
 Model_Simulating.py shows the building of the model, a random forrest was used (logistic regression with polynomial kernals were explored but not as effective), and the model being deployed on 30 days of sequential clean test data to simulate unknown future market outcomes. Stock purchases and short positions were based off exact Open price to exact close price two days later, and an equal amount was invested daily based off prediction. At a random state 8 (Chosen at random for repeatability) the total gain was roughly 1%. However, factoring in the high False positive (38 samples out of 842 total) rates from the training data and adding in a probability condition to the simulation to account for this, we push preformance to an average of 1.5% gain. 
