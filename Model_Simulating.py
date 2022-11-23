@@ -21,8 +21,8 @@ if __name__ == "__main__":
 
     """Setting up training/test split (Test data is last month of data and is untouched during training to
     simulate unknown future market conditions"""
-    X_train = training_df.drop(["Target","Class_Target"],axis =1)[0:1405]
-    y_train = training_df["Class_Target"][0:1405]
+    X_train = training_df.drop(["Target","Class_Target"],axis =1)[0:1400]
+    y_train = training_df["Class_Target"][0:1400]
     X_test = training_df.drop(["Target","Class_Target"],axis =1)[1405:]
     y_test = training_df["Class_Target"][1405:]
 
@@ -34,7 +34,7 @@ if __name__ == "__main__":
 
     """Test df is created for market simulation, Open and target columns are brought back in"""
     prediction = model_class.predict(X_test)
-    test = X_test
+    test = X_test.copy()
     test["Prediction"] = prediction
     test["Target"] = df["Target"][1405:]
     test.reset_index(inplace = True, drop = True)
